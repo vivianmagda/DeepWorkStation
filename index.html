@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Work Station</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
     <h1>Deep Work Station</h1>
-    
+    <audio id="lofiTrack">
+        <source src="lofi-lofi-chill-lofi-girl-471138.mp3" type="audio/mp3">
+    </audio>     
+        <button id="playLofiButton" onclick="playLofi()">Play Lofi</button>
+        <button id="pauseLofiButton" onclick="pauseLofi()">Pause Lofi</button>
+        <label for="lofiVolume">Lofi Volume: </label>
+        <input type="range" id="lofiVolume" class="volume-slider" min="0.00" max="1.00" step="0.01" value="0.30">        
+    <script src="index.js"></script>
 </body>
 </html>
