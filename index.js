@@ -1,16 +1,23 @@
-const lofiTrack = document.getElementById(`lofiTrack`)
-const lofiVolume = document.getElementById(`lofiVolume`)
+// Audio element for the lofi track
+const lofiTrack = document.getElementById("lofiTrack")
 
+// Volume slider element
+const lofiVolume = document.getElementById("lofiVolume")
+
+// Set initial volume to 30%
 lofiTrack.volume = 0.3
 
-lofiVolume.addEventListener(`input`, function(e){
-    lofiTrack.volume = e.target.value
+// Update track volume when slider changes
+lofiVolume.addEventListener("input", e => {
+  lofiTrack.volume = e.target.value
 })
 
-function playLofi(){
-    lofiTrack.play()
+// Play the lofi track
+function playLofi() {
+  lofiTrack.play()
 }
 
-function pauseLofi(){
-    lofiTrack.pause()
+// Pause the lofi track
+function pauseLofi() {
+  lofiTrack.pause()
 }
