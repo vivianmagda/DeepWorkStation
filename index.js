@@ -4,10 +4,8 @@ const lofiTrack = document.getElementById("lofiTrack")
 // Volume slider element
 const lofiVolume = document.getElementById("lofiVolume")
 
-// Set initial volume to 30%
+// Set initial volume to 30% and Sync slider with audio volume on load
 lofiTrack.volume = 0.3
-
-// Sync slider with audio volume on load
 lofiVolume.value = lofiTrack.volume
 
 // Update track volume when slider changes
