@@ -9,11 +9,23 @@
     <h1>Deep Work Station</h1>
     <audio id="lofiTrack">
         <source src="audio\lofi\lofi-lofi-chill-lofi-girl-471138.mp3" type="audio/mp3">
-    </audio>     
-        <button id="playLofiButton">Play Lofi</button>
-        <button id="pauseLofiButton">Pause Lofi</button>
+    </audio>
+    <audio id="natureTrack">
+        <source src="audio\nature\chuva-1-119168.mp3" type="audio/mp3">
+    </audio>
+    <div>
+        <button id="lofiPlayButton">Play Lofi</button>
+        <button id="lofiPauseButton">Pause Lofi</button>
         <label for="lofiVolume">Lofi Volume: </label>
-        <input type="range" id="lofiVolume" class="volume-slider" min="0.00" max="1.00" step="0.01">        
+        <input type="range" id="lofiVolume" class="volume-slider" min="0.00" max="1.00" step="0.01"> 
+    </div>     
+    <div>
+        <button id="naturePlayButton">Play Nature</button>
+        <button id="naturePauseButton">Pause Nature</button>
+        <label for="natureVolume">Nature Volume: </label>
+        <input type="range" id="natureVolume" class="volume-slider" min="0.00" max="1.00" step="0.01"> 
+    </div>  
+               
     <script type="module" src="js/app.js"></script>
 </body>
 </html>
