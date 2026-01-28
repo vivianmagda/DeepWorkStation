@@ -1,6 +1,9 @@
 export class AudioManager {
     constructor(audioElementId) {
         this.track = document.getElementById(audioElementId);
+        if (this.track){
+            this.track.loop = true
+        }
     }
 
     setVolume(value) {

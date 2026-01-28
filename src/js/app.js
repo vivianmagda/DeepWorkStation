@@ -8,5 +8,3 @@ const natureManager = new AudioManager("natureTrack")
 // Initialize the interface 
 new Controls(lofiManager, "lofiPlayButton", "lofiPauseButton", "lofiVolume")
 new Controls(natureManager, "naturePlayButton", "naturePauseButton", "natureVolume")
-
-
