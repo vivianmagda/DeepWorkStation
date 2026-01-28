@@ -1,24 +1,23 @@
-// Audio element for the lofi track
-const lofiTrack = document.getElementById("lofiTrack")
+import { AudioManager } from './audio/AudioManager.js'
 
-// Volume slider element
-const lofiVolume = document.getElementById("lofiVolume")
+// Initialize the controller
+const lofiManager = new AudioManager("lofiTrack")
+const lofiVolumeSlider = document.getElementById("lofiVolume")
 
-// Set initial volume to 30% and Sync slider with audio volume on load
-lofiTrack.volume = 0.3
-lofiVolume.value = lofiTrack.volume
+// Grab the buttons from the DOM
+const lofiPlayBtn = document.getElementById("playLofiButton");
+const lofiPauseBtn = document.getElementById("pauseLofiButton");
 
+// Initial sync
+lofiManager.setVolume(0.3)
+lofiVolumeSlider.value = 0.3
+
+//Event Listeners
 // Update track volume when slider changes
-lofiVolume.addEventListener("input", e => {
-  lofiTrack.volume = e.target.value
+lofiVolumeSlider.addEventListener("input", e => {
+  lofiManager.setVolume(e.target.value)
 })
 
-// Play the lofi track
-function playLofi() {
-  lofiTrack.play()
-}
-
-// Pause the lofi track
-function pauseLofi() {
-  lofiTrack.pause()
-}
+// Attach the functions to the click event
+lofiPlayBtn.addEventListener("click", () => lofiManager.play());
+lofiPauseBtn.addEventListener("click", () => lofiManager.pause());
